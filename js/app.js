@@ -16,7 +16,7 @@ if (logoutBtn) {
 
 // bu kod dark mode light mode uchun start
 const toggleBtn = document.getElementById("orqaFon");
-const malumotlars =  document.querySelector(".malumotlar")
+const malumotlars = document.querySelector(".malumotlar")
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 });
@@ -47,3 +47,14 @@ fetch("https://json-api.uz/api/project/fn37/cars")
   .catch(error => {
     console.error("nimadir xato siz buni bilarmidingiz:", error);
   });
+
+
+let localCars = JSON.parse(localStorage.getItem('cars')) || [];
+localCars.forEach(car => {
+  malumotlar.innerHTML += `
+    <div class="card">
+      <h3>${car.name}</h3>
+      <p>${car.price}</p>
+      <p>${car.description}</p>
+    </div>`;
+});
