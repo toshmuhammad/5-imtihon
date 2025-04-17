@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-100 h-full">
+
+    <div class="flex items-center justify-center h-full">
+        <div class="bg-gray-300 py-[100px] px-[50px] rounded-lg">
+            <h1 class="text-center text-5xl font-bold mb-10">Login</h1>
+            <form id="formLogin" class="flex flex-col gap-4 w-[384px] login-form" data-state="normal">
+                <div>
+                    <label for="username"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Foydalanuvchi nomi*</label>
+                    <input placeholder="Foydalanuvchi nomini yoki emailini kiriting..." type="text" id="username"
+                        name="username"
+                        class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Maxfiy
+                        soz*</label>
+                    <input type="password" placeholder="Maxfiy parolni kiriting" id="password" name="password"
+                        class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+                
+                <button type="submit"
+                    class="text-white bg-[#050708] disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-center gap-2 cursor-pointer dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 mb-2">
+                    Kirish
+                </button>
+            </form>
+        </div>
+    </div>
+  <script src="./js/login.js" type="module"></script>
+</body>
+</html>
