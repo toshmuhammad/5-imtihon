@@ -15,35 +15,35 @@ if (logoutBtn) {
 
 
 // bu kod dark mode light mode uchun start
-const toggleBtn = document.getElementById("toggleMode");
-
+const toggleBtn = document.getElementById("orqaFon");
+const malumotlars =  document.querySelector(".malumotlar")
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 });
 // bu kod dark mode light mode uchun end
 
 
-// export function localAddProduct(what, where) {
-//   const
-// }
 
 
-
-// fetch("https://json-api.uz/api/project/fn37/cars", {
-//   method: "POST",
-//   headers: {
-//     "Content-Type": "application/json"
-//   },
-//   body: JSON.stringify({
-//     ism: "Toshmuhammad",
-//     yosh: 15
-//   })
-// })
-// .then(response => response.json())
-// .then(data => {
-//   console.log("Javob:", data);
-// })
-// .catch(error => {
-//   console.error("Xatolik:", error);
-// })
-// .finally(() => {});
+const malumotlar = document.querySelector('.malumotlar')
+fetch("https://json-api.uz/api/project/fn37/cars")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("sizda hato yoq anu tarmoqda xato bor: " + response.status);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log("kegan narsa:", data);
+    data.data.forEach(car => {
+      malumotlar.innerHTML += `
+      <div class="card">
+          <h3>${car.name}</h3>
+          <p>${car.price}</p>
+          <p>${car.description}</p>
+        </div>`;
+    });
+  })
+  .catch(error => {
+    console.error("nimadir xato siz buni bilarmidingiz:", error);
+  });

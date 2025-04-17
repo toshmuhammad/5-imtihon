@@ -1,4 +1,4 @@
-// bu kod logindan otish uchun start
+// bu kod logindan otish uchun. start
 const form = document.getElementById('formLogin');
 
 form.addEventListener('submit', function (e) {
@@ -14,4 +14,4 @@ form.addEventListener('submit', function (e) {
         alert('Login yoki parol notogri. Login: fn37 Parol: fn37');
     }
 });
-// bu kod logindan otish uchun end
+// bu kod logindan otish uchun. end

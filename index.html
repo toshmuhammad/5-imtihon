@@ -5,7 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="./dark.css">
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            transition: 0.3s;
+            font-family: sans-serif;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .malumotlar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            margin-left: 80px;
+        }
+
+        .card {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode .card {
+            background-color: #2c2c2c;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <!-- loginga chiqish uchun -->
@@ -13,16 +52,17 @@
 
     <!-- Dark mode Light mode -->
     <div class="container">
-        <button class="border bg-blue-300 rounded-sm hover:bg-blue-700 ml-4" id="toggleMode">Click</button>
-      </div>
-
-      
-    <div class="flex flex-col justify-center items-center mt-10">
-        <h1 class="text-5xl font-bold ">Moshinalar Ro'yhati</h1>
-        <a href="./add.html"><button class="border bg-blue-300 px-4 py-2 rounded-sm hover:bg-blue-700 text-xl mt-10 ml-[380px]">Add</button></a>
+        <button class="border bg-blue-300 rounded-sm hover:bg-blue-700 ml-4" id="orqaFon">Click</button>
     </div>
 
 
+    <div class="flex flex-col justify-center items-center mt-10">
+        <h1 class="text-5xl font-bold ">Moshinalar Ro'yhati</h1>
+        <a href="./add.html"><button
+                class="border bg-blue-300 px-4 py-2 rounded-sm hover:bg-blue-700 text-xl mt-10 ml-[380px]">Add</button></a>
+    </div>
+
+    <div class="malumotlar"></div>
     <script src="./js/app.js"></script>
 </body>
 </html>
